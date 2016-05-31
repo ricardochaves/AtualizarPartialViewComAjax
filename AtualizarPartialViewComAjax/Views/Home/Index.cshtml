@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+<div class="row">
+    <div class="col-md-4">
+        @using (Html.BeginForm("EuVouSerAtualizado", "Home", FormMethod.Post, new {@id="MeuIDForm" }))
+        {
+        
+        
+        
+            <p>
+                <div id="EuVouSerAtualizado">
+                    @{
+            Html.RenderPartial("EuVouSerAtualizado");
+        }
+                </div>
+            </p>
+            <input type="submit" value="Atualiza Data" id="AtualizaData" class="btn btn-default" />
+        }
+        
+    </div>
+</div>
+
