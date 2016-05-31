@@ -1,16 +1,16 @@
 # AtualizarPartialViewComAjax
 Usando PartialView e atualizando com Ajax.
 
-#Criação do Projeto
- - Criar um projeto MVC5.
- - Incluir um novo Model:
+##Criação do Projeto
+ - Criar um projeto **MVC5**.
+ - Incluir um novo **Model**:
 ```c#
     public class ModelData
     {
         public DateTime Agora { get; set; }
     }
 ```
- - Adicionar um novo método ao HomeController:
+ - Adicionar um novo método ao **HomeController**:
 ```c#
   public PartialViewResult EuVouSerAtualizado()
   {
@@ -21,7 +21,7 @@ Usando PartialView e atualizando com Ajax.
       return PartialView(m);
     }
 ```
-- Clique em cima do nome do metodo do controler e mande adicionar uma view, coloque ele como partial e usando o modelo ModelData, remove o Edit e o Back. Ela ficará assim:
+- Clique em cima do **nome do metodo do controler** e mande **adicionar uma view**, coloque ele como **partial** e usando o modelo **ModelData**, remove o Edit e o Back. Ela ficará assim:
 ```c#
 @model AtualizarPartialViewComAjax.Models.ModelData
 
@@ -40,7 +40,7 @@ Usando PartialView e atualizando com Ajax.
     </dl>
 </div>
 ```
- - No final do _Layout adicione o seguinte Script:
+ - No final do **_Layout** adicione o seguinte **Script**:
  ```c#
      <script type="text/javascript">
 
@@ -69,7 +69,7 @@ Usando PartialView e atualizando com Ajax.
 
     </script>
 ```
- - Substitua todo o código da pagina Index do controle Home com esse:
+ - Substitua todo o código da pagina **Index do controle Home** com esse:
  ```c#
  @{
     ViewBag.Title = "Home Page";
@@ -93,9 +93,9 @@ Usando PartialView e atualizando com Ajax.
     </div>
 </div>
 ```
-#Entendendo o projeto
- - A partial view apenas exibe os dados do objeto ModelData que ela recebe. Nada mais alem disso.
- - O novo metodo dentro do controler apenas criar um novo ModelData e coloca um valor dentro dele, retornando um PartialViewResult.
- - A view Index do controle Home só renderiza uma partial view Html.RenderPartial("EuVouSerAtualizado");
- - No script ele executa o metodo do controler a cada 3 segundos, com isso a PartialView recebe um novo objeto e é atualizada. 
+##Entendendo o projeto
+ - A **partial view** apenas exibe os dados do objeto ModelData que ela recebe. Nada mais alem disso.
+ - O **novo metodo** dentro do controler apenas criar um **novo ModelData** e coloca um valor dentro dele, retornando um **PartialViewResult**.
+ - A view **Index** do controle Home só **renderiza uma partial view** Html.RenderPartial("EuVouSerAtualizado");
+ - No script ele **executa o metodo do controler** a cada 3 segundos, com isso a **PartialView recebe um novo objeto e é atualizada**. 
 
