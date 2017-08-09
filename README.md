@@ -1,7 +1,7 @@
 # AtualizarPartialViewComAjax
 Usando PartialView e atualizando com Ajax.
 
-##Criação do Projeto
+## Criação do Projeto
  - Criar um projeto **MVC5**.
  - Incluir um novo **Model**:
 ```c#
@@ -93,7 +93,7 @@ Usando PartialView e atualizando com Ajax.
     </div>
 </div>
 ```
-##Entendendo o projeto
+## Entendendo o projeto
  - A **partial view** apenas exibe os dados do objeto ModelData que ela recebe. Nada mais alem disso.
  - O **novo metodo** dentro do controler apenas criar um **novo ModelData** e coloca um valor dentro dele, retornando um **PartialViewResult**.
  - A view **Index** do controle Home só **renderiza uma partial view** Html.RenderPartial("EuVouSerAtualizado");
